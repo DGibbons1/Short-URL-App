@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ShortUrlApp';
+
+  // Variable to hold short URL returned from DB
+  public shortURL = 'Placeholder';
+
 }

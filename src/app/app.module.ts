@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 
 // Import the Angular Bootstrap Module
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// Import HttpModule
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -12,6 +14,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     NgbModule
   ],
   providers: [],
