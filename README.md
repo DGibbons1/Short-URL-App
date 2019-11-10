@@ -1,27 +1,12 @@
-# ShortUrlApp
+# Short Url App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.16.
+This application takes a URL and returns a shorter URL that can be entered into the browser and redirects the user to the original URL. The application has been developed using Angular with a MySQL database to store the URL's.
+
+Follow the instructions below to deploy a development environment to demonstrate the application.
+
+## Database Setup
+The database install file is located in the following folder ShortUrlApp/database.
+Import the database into a MySQL instance running on a local server.
 
 ## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Clone the repository to the root directory on your local server. Navigate to the application folder (ShortUrlApp) and run `ng serve --open` for a dev server. Your browser will open to display the applciation. If the browser does not automatically open the application after a few seconds, navigate to `http://localhost:4200/` to view the application.

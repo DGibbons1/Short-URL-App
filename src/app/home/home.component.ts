@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // Import API Service
-import { ApiService } from './services/api-service';
+import { ApiService } from '../services/api-service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent {
-  title = 'ShortUrlApp';
+export class HomeComponent {
 
   // Variable to hold short URL returned from DB
   public shortURL = '';
-  public fullURL = 'Paste URL Here';
+  public fullURL = '';
 
   constructor(private apiService: ApiService) { }
 
