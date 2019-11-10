@@ -4,7 +4,7 @@
 include("../config/dbConnect.php");
 
 // Base String for Short URL
-$urlBase = "http://localhost/ShortUrlApp/api/redirect.php/";
+$urlBase = "http://localhost:4200/url/";
 
 // Get data from http request
 $baseURL = $_GET["base_url"];
