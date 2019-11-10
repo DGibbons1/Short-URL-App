@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,6 @@ export class ApiService {
   constructor(public http: Http) { }
 
   postURL(baseURL: string): Observable<any> {
-    return  this.http.get(this.apiBaseURL + "url/create.php?base_url="+baseURL);
+    return  this.http.get(this.apiBaseURL + "url/create.php?base_url="+baseURL).pipe(map(obs => obs.json()));
   }
 }

@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'ShortUrlApp';
 
   // Variable to hold short URL returned from DB
-  public shortURL = 'Placeholder';
+  public shortURL = '';
   public fullURL = 'Paste URL Here';
 
   constructor(private apiService: ApiService) { }
@@ -19,7 +19,7 @@ export class AppComponent {
   public clickSubmitBtn() {
     if (this.fullURL !== 'Paste URL Here' && this.fullURL.length > 0) {
       this.apiService.postURL(this.fullURL).subscribe(data => {
-        console.log(data);
+        this.shortURL = data['shortURL'];
       }
     );
     } else {

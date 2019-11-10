@@ -21,5 +21,8 @@ if($connection->multi_query($sql)){
 // Close the connection to the DB after executing query
 $connection->close();
 
+// Return the Short URL value that has been generated
+echo "{\"shortURL\" : \"" .$shortURL."\"}";
+
 ?>
 
