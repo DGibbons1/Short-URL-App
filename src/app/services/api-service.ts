@@ -5,17 +5,14 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ServerActionService {
+export class ApiService {
 
   // Base URL for API calls
-  public apiBaseURL = 'http://localhost/ShortUrlApp/api/';
+  public apiBaseURL = "http://localhost/ShortUrlApp/api/";
 
   constructor(public http: Http) { }
 
   postURL(baseURL: string): Observable<any> {
-    return  this.http.post(this.apiBaseURL + 'url/create.php',
-    {
-      'base_url': baseURL
-    });
+    return  this.http.get(this.apiBaseURL + "url/create.php?base_url="+baseURL);
   }
 }

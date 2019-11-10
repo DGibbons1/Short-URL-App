@@ -1,7 +1,7 @@
 <!-- NavBar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">Short URL App</a>
+    <a class="navbar-brand">Short URL App</a>
   </div>
 </nav> <!-- Close NavBar -->
 
@@ -10,9 +10,9 @@
   <!-- Input Box -->
   <h4>Enter a URL</h4>
   <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Paste URL Here">
+    <input type="text" class="form-control" [(ngModel)]='fullURL'>
     <div class="input-group-append">
-      <button class="btn btn-primary" type="button">Submit</button>
+      <button class="btn btn-primary" type="button" (click)='clickSubmitBtn()'>Submit</button>
     </div>
   </div> <!-- Close Input Box -->
   <br>

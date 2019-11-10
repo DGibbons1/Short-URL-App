@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+// Import API Service
+import { ApiService } from './services/api-service';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +12,19 @@ export class AppComponent {
 
   // Variable to hold short URL returned from DB
   public shortURL = 'Placeholder';
+  public fullURL = 'Paste URL Here';
+
+  constructor(private apiService: ApiService) { }
+
+  public clickSubmitBtn() {
+    if (this.fullURL !== 'Paste URL Here' && this.fullURL.length > 0) {
+      this.apiService.postURL(this.fullURL).subscribe(data => {
+        console.log(data);
+      }
+    );
+    } else {
+      alert('Enter a valid URL');
+    }
+  }
 
 }
