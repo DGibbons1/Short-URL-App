@@ -11,7 +11,7 @@ export class HomeComponent {
 
   // Variable to hold short URL returned from DB
   public shortURL = '';
-  public fullURL = 'Paste URL Here';
+  public fullURL = '';
 
   constructor(private apiService: ApiService) { }
 
